@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #EFEFEF;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: #1E1E1E;
+    font-family: "Roboto", sans-serif;;
+}
+
+/* LAYOUT - MOBILE FIRST */
+main {
+    display: grid;
+    grid-template-rows: repeat(8, 1fr);
+    height: 100vh;
+}
+
+
+/* OPEN AND CLOSE TRANSITION */
+.hidden {
+    display: none !important;
+}
+
+/* mobile first */
+.profile-container-shrink{
+    grid-row: 1/2 !important;
+    padding: 1em !important;
+    background-color: #EEE785;
+}
+
+.projects-container-expand{
+    grid-row: 2/9 !important;
+    overflow-y: auto;
+    background-color: #EFEFEF !important;
+    padding: 2em;
+
+    .projects-content{
+        display: grid;
+        gap: 1em; 
+    }
+}
+
+
+
+/* tablet & desktop */
+@media(min-width: 768px){
+    .projects-container-expand{
+        grid-column: 2/13 !important;
+        grid-row: 1/9 !important;
+    }
+
+    .profile-container-shrink{
+        grid-column: 1/2 !important;
+        grid-row: 1/9 !important;
+    }
+}
+
+
+@media (min-width: 1024px){
+    .projects-container-expand{
+        grid-column: 2/13 !important;
+        grid-row: 1/9 !important;
+    }
+
+    .profile-container-shrink{
+        grid-column: 1/2 !important;
+        grid-row: 1/9 !important;
+    }
+}

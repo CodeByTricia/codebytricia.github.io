@@ -1,0 +1,297 @@
+/* PROFILE - MODILE FIRST */
+.profile-grid{
+    grid-row: 1/8;
+}
+
+.profile-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.2em;
+}
+
+.profile-content{
+    margin: 0; 
+    max-height: 80%;
+    gap: 0.6em;
+    background-color: white;
+    padding: 1.3em;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    border-top-color: white;
+    border-radius: 0 0 10px 10px;
+}
+
+.profile-content-parent{
+    box-shadow: 0 0 0 2px #1E1E1E;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-nav {
+    background-color: #62ADE3;
+    margin: 0;
+    max-height: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 2px 10px 0 0;
+    border-bottom: 2px solid #1E1E1E;
+}
+
+.nav-list {
+    display: flex;
+    list-style-type: none;
+    gap: 0.3em;
+}
+
+.nav-icon {
+    width: 15px;
+}
+
+
+.img-box{
+    grid-column: 1/3;
+    grid-row: 1/4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.profile-img {
+    border-radius: 10px;
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contact-box {
+    grid-column: 3/6;
+}
+
+.contact-list {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    display: flex;
+    gap: 0.40em;
+    justify-content:flex-end;
+}
+
+.contact-icon {
+    width: 25px;
+}
+
+.contact-btn {
+    border: none;
+    padding: 0.60em 1.2em;
+    border-radius: 3em;
+    background-color: #EEE785;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.intro-box {
+    grid-column: 3/6;
+    grid-row: 2/4;
+    font-family: inherit;
+    font-size: 0.99rem;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    padding: 0 1em;
+}
+
+.span3 {
+    font-style: italic;
+}
+
+.span2, .span3, .span5 {
+    font-weight: 500;
+}
+
+.skills-box {
+    grid-column: 1/6;
+    grid-row: 4/6;
+    font-size: 0.93rem;
+}
+
+.skill-highlight {
+    display: flex;
+    gap: 0.45em;
+}
+
+.skill-item {
+    font-size: 0.9rem;
+    font-family: inherit;
+    background-color: #62ADE3;
+    padding: 0.50em 1.2em;
+    border-radius: 3em;
+    border: none;
+    margin-bottom: 0.70em;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.skill-img {
+    width: 18px;
+}
+
+/* modal */
+.show-modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background-color: white;
+    max-width: 300px;
+    max-height: 300px;
+    border-radius: 8px;
+    padding: 1em;
+}
+
+
+/* MEDIA QUERIES */
+/* phone 1 */
+ @media(min-width: 360px){
+    .profile-content{
+        max-height: 92%;
+        padding: 0.9em;
+        gap: 0.6em;
+    } 
+
+    .profile-img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* profile content grid*/
+    .intro-box {
+        grid-row: 2/4;
+        font-size: 0.888rem;
+    }
+
+    .img-box{
+        grid-row: 1/4;
+    }
+
+    .skills-box {
+        grid-row: 4/6;
+    }
+
+    .skill-item, .contact-btn {
+    font-size: 0.8rem;
+}
+    
+
+
+}
+
+/* phone 2 */
+@media(min-width: 430px){
+   .profile-content{
+        max-height: 80%;
+    } 
+
+    .profile-img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+}
+
+
+/* tablet */
+@media(min-width: 768px){
+
+    main {
+        grid-template-columns: repeat(12, 1fr);
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .profile-content {
+        padding: 1.5em;
+    }
+
+
+    .profile-grid{
+        grid-column: 1/12;
+        grid-row: 1/9;
+    }
+
+    .projects-container{
+        grid-row: 1/9;
+    }
+
+    /* profile content grid*/
+    .intro-box {
+        grid-row: 2/5;
+        font-size: 1.4rem;
+    }
+
+    .img-box{
+        grid-row: 1/5;
+    }
+
+    .skills-box {
+        grid-row: 5/7;
+        font-size: 0.88em;
+    }
+
+    .skill-item{
+        font-size: 0.88em;
+    }
+
+    .contact-icon {
+        width: 25px;
+    }
+
+    .contact-btn {
+        font-size: 0.88em;
+    }
+
+
+}
+
+
+/* desktop*/
+@media (min-width: 1024px){
+    .profile-container{
+        padding: 2em 9em;
+    }
+
+}
+
+@media (min-width: 1100px){
+    .profile-container{
+        padding: 2em 12em;
+        
+    }
+
+    /* profile content grid*/
+    .intro-box {
+        font-size: 1.7rem;
+    }
+
+    .skills-box, .skill-item {
+        font-size: 1em;
+    }
+
+}
+
+@media (min-height: 790px){
+    .profile-content{
+        max-height: 58%;
+        padding: 0.99em;
+        gap: 0.6em;
+    } 
+
+}
