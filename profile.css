@@ -1,4 +1,4 @@
-/* PROFILE - MODILE FIRST */
+/* PROFILE - MOBILE FIRST */
 .profile-grid{
     grid-row: 1/8;
 }
@@ -8,18 +8,24 @@
     justify-content: center;
     align-items: center;
     padding: 1.2em;
+    height: 100%;
+    min-height: 0;
 }
 
 .profile-content-parent{
     box-shadow: 0 0 0 2px #1E1E1E;
     display: flex;
     flex-direction: column;
-    height: 80%;
+    background-color: white;
+    width: calc(100% - 2rem);
+    height: calc(100% - 2rem);
+    min-height: 0;
 }
 
 .profile-content{
-    margin: 0; 
-    height: 80%;
+    margin: 0;
+    flex: 1;
+    min-height: 0;
     gap: 0.6em;
     background-color: white;
     padding: 1.3em;
@@ -84,7 +90,7 @@
 }
 
 .contact-icon {
-    width: 25px;
+    width: 26px;
 }
 
 .contact-btn {
@@ -96,6 +102,15 @@
     font-family: inherit;
 }
 
+
+.contact-btn:hover{
+    background-color: #62ADE3;
+}
+
+.contact-icon:hover {
+    filter: invert(69%) sepia(50%) saturate(834%) hue-rotate(176deg) brightness(91%) contrast(94%);
+}
+
 .intro-box {
     grid-column: 3/6;
     grid-row: 2/4;
@@ -105,6 +120,7 @@
     display: flex;
     justify-content: center;
     padding: 0 1em;
+    
 }
 
 .span3 {
@@ -143,6 +159,13 @@
     width: 18px;
 }
 
+#prof-header{
+    width: calc(100% - 0.7rem);
+    max-width: inherit;
+    padding: 0.6em 0;
+}
+
+
 /* modal */
 .show-modal {
     position: fixed;
@@ -154,22 +177,48 @@
     background-color: white;
     max-width: 300px;
     max-height: 300px;
-    border-radius: 8px;
+    border: 2px solid #1E1E1E;
+    color: #1E1E1E;
+
+    .top-nav {
+        background-color: #EEE785;
+    } 
+}
+
+#close-modal {
+    background-color: transparent;
+    border: none;
+    margin-top: 1px;
+}
+
+.modal-img {
+    width: 20px;
+}
+
+.contact-info {
     padding: 1em;
+}
+
+.contact-info h3 {
+    margin:0;
+}
+
+.contact-info p {
+    margin: 0.7em 0;
 }
 
 
 /* MEDIA QUERIES */
 /* phone 1 */
  @media(min-width: 360px){
-    .profile-content-parent, .profile-content{
-        height: 78%;
-    }
-    
     .profile-content{
         padding: 0.9em;
         gap: 0.6em;
     } 
+
+    .projects-container {
+        border-top: 2px solid #1E1E1E;
+    }
 
     .profile-img {
         height: 100%;
@@ -177,9 +226,9 @@
     }
 
     /* profile content grid*/
-    .intro-box {
+    .intro-box p{
         grid-row: 2/4;
-        font-size: 0.888rem;
+        font-size: 1rem;
     }
 
     .img-box{
@@ -190,59 +239,80 @@
         grid-row: 4/6;
     }
 
-    .skill-item, .contact-btn {
-    font-size: 0.8rem;
-}
-    
+    .contact-btn {
+        font-size: 0.7rem;
+    }
 
+    .skill-item {
+        font-size: 0.789rem;
+    }
 
+    .profile-container-shrink{
+        border-bottom: 2px solid #1E1E1E;
+    }   
 }
 
 /* phone 2 */
 @media(min-width: 430px){
-   /* .profile-content{
-        height: 80%;
-    }  */
-
-    .profile-content-parent, .profile-content{
-        height: 80%;
-    }
-
     .profile-img {
         height: 100%;
         object-fit: cover;
     }
 
+    .intro-box p{
+        font-size: 1.223rem;
+    }
+
 }
 
+@media (min-width: 650px){
+    .intro-box p{
+        font-size: 1.5rem;
+    }
+}
 
 /* tablet */
 @media(min-width: 768px){
-
     main {
+        display: grid;
         grid-template-columns: repeat(12, 1fr);
-        height: 100vh;
+        grid-template-rows: repeat(8, minmax(0, 1fr));
         width: 100vw;
+        height: 100vh;
+        overflow: hidden;
     }
 
     .profile-content {
         padding: 1.5em;
     }
 
-
     .profile-grid{
         grid-column: 1/12;
         grid-row: 1/9;
     }
 
+    .profile-container-shrink{
+        border-bottom: none;
+    }   
+
     .projects-container{
         grid-row: 1/9;
+        border-top: none;
+        border-left: 2px solid #1E1E1E;
     }
 
+    .projects-container-flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1.2em;
+    }
+
+
     /* profile content grid*/
-    .intro-box {
+    .intro-box p{
         grid-row: 2/5;
-        font-size: 1.4rem;
+        font-size: 2rem;
     }
 
     .img-box{
@@ -266,34 +336,62 @@
         font-size: 0.88em;
     }
 
+    /* applies to BOTH profile and projects */
+    .tab-header{
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 60px;
+        height: 100%;
+    }
 
+    .projects-container {
+        background-color: #EEE785;
+        border-top: none
+    }
+
+    .tab-title, .year{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        justify-content: space-between;
+    }
+    
+    .tab-title h2,
+    .tab-title p,
+    .year p{
+        margin: 0;
+    }
+
+    .year hr{
+        width: 1px;
+        height: 100%;
+        margin: 0;
+    }
 }
 
 
 /* desktop*/
 @media (min-width: 1024px){
     .profile-container{
-        padding: 2em 9em;
+        padding:2em 9em;
+        height:100%;
     }
 
-    .profile-content-parent, .profile-content{
-        height: 85%;
+    .intro-box p{
+        font-size: 1.888rem;
     }
-
-
 }
 
 @media (min-width: 1100px){
     .profile-container{
         padding: 2em 12em;
-        
+        height:100%;
     }
 
     /* profile content grid*/
-    .intro-box {
-        font-size: 1.7rem;
-    }
-
     .skills-box, .skill-item {
         font-size: 1em;
     }
@@ -302,7 +400,6 @@
 
 @media (min-height: 790px){
     .profile-content{
-        /* max-height: 58%; */
         padding: 0.99em;
         gap: 0.6em;
     } 

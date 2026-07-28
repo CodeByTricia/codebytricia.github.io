@@ -1,14 +1,11 @@
 /* PROJECTS - MOBILE FIRST */
 .projects-container {
     background-color: #EEE785;
-    border-top: 2px solid #1E1E1E;
-    min-height: 0;  
-    cursor: pointer;
+    min-height: 0;
     font-family: inherit;
 }
 
 .project-item {
-    background-color: rgb(209, 209, 209);
     box-shadow: 0 0 0 2px #1E1E1E;
 }
 
@@ -30,27 +27,12 @@
     color: #1E1E1E;
 }
 
-.project-item:hover {
-
-    .title-box {
-        background-color: #EEE785;
-    }
-
-    .title-box p {
-        color: #1E1E1E;
-    }
-
-    .skill-item {
-        background-color: #EEE785 !important;
-    }
-}
-
 .project-stack {
-    padding: 0.3cem 0.2em 0.7em 0.7em;
+    padding: 0.3em 0.4em 0 0.4em;
 }
 
 .tab-header{
-    padding: 1em;
+    padding: 0.6em 1em;
 }
 
 .tab-title, .year{
@@ -75,15 +57,31 @@ hr {
     padding: 0;
 }
 
+.project-item:hover {
+
+    .title-box {
+        background-color: #EEE785;
+    }
+
+    .title-box p {
+        color: #1E1E1E;
+    }
+
+    .skill-item {
+        background-color: #EEE785 !important;
+    }
+}
+
+
 
 /* MEDIA QUERY */
-
 @media(min-width: 768px){
     .projects-container-expand {
         .projects-content{
-            grid-template-rows: 40px repeat(4, 1fr);
+            grid-template-rows: 40px repeat(3, 1fr) 40px;
             grid-template-columns: 1fr 1fr;
             gap: 1em;
+
         }
 
         .proj1, .proj4{
@@ -101,8 +99,6 @@ hr {
         .mini-proj-link{
             grid-row: 5/6;
         }
-       
-        
     }
 
 

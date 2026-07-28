@@ -4,7 +4,7 @@ const closeModal = document.getElementById("close-modal")
 
 const profileContainer = document.getElementById("profile-container")
 const projectsContainer = document.getElementById("projects-container")
-const profileContent = document.getElementById("profile-content")
+const profileContent = document.getElementById("profile-content-parent")
 const projectsContent = document.getElementById("projects-content")
 const profileHeader = document.getElementById("prof-header")
 const projectHeader = document.getElementById("proj-header")
@@ -33,8 +33,10 @@ profileContainer.addEventListener("click", () => {
         profileContainer.classList.remove("profile-container-shrink")
         profileContainer.classList.add("profile-grid")
         topNav.classList.remove("hidden")
+        
 
         projectsContainer.classList.remove("projects-container-expand")
+        projectsContainer.classList.add("projects-container-flex")
         projectsContent.classList.add("hidden")
 
         projectHeader.classList.remove("hidden")
@@ -52,10 +54,12 @@ projectsContainer.addEventListener("click", () => {
     topNav.classList.add("hidden")
     
     projectsContainer.classList.add("projects-container-expand")
+    projectsContainer.classList.remove("projects-container-flex")
     projectsContent.classList.remove("hidden")
     
     projectHeader.classList.add("hidden")
     profileHeader.classList.remove("hidden")
+
 })
 
 
