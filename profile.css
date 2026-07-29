@@ -210,9 +210,14 @@
 
 /* MEDIA QUERIES */
 /* phone 1 */
- @media(min-width: 360px){
+ @media(min-width: 330px){
+    .profile-content-parent{
+        width: calc(100% - 0.6rem);
+        height: calc(87% - 5rem);
+    }
+
     .profile-content{
-        padding: 0.9em;
+        padding: 0.7em;
         gap: 0.6em;
     } 
 
@@ -243,8 +248,12 @@
         font-size: 0.7rem;
     }
 
+    .contact{
+        font-size: 0.623rem;
+    }
+
     .skill-item {
-        font-size: 0.789rem;
+        font-size: 0.66rem;
     }
 
     .profile-container-shrink{
