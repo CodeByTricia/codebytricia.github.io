@@ -7,6 +7,10 @@
 
 .project-item {
     box-shadow: 0 0 0 2px #1E1E1E;
+} 
+
+.project-item a {
+    text-decoration: none;
 }
 
 .project-img {
@@ -57,22 +61,39 @@ hr {
     padding: 0;
 }
 
-.project-item:hover {
-
-    .title-box {
-        background-color: #EEE785;
-    }
-
-    .title-box p {
-        color: #1E1E1E;
-    }
-
-    .skill-item {
-        background-color: #EEE785 !important;
-    }
+.project-item:hover .title-box {
+    background-color: #EEE785;
 }
 
+.project-item:hover .title-box p {
+    color: #1E1E1E;
+}
 
+.project-item .skill-item {
+    transition: background-color 0.2s ease;
+}
+
+.project-item:hover .skill-item {
+    background-color: #EEE785 !important;
+} 
+
+.project-item {
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.project-item:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 
+        4px 4px 0 #1E1E1E,
+        0 0 0 2px #1E1E1E;
+}
+
+.project-item:active {
+    transform: translate(0, 0);
+    box-shadow: 
+        0 0 0 2px #1E1E1E;
+}
 
 /* MEDIA QUERY */
 @media(min-width: 768px){
@@ -84,15 +105,15 @@ hr {
 
         }
 
-        .proj1, .proj4{
+        .proj1, .proj2 {
             grid-row: 2/3;
         }
 
-        .proj2, .proj5 {
+        .proj4, .proj3 {
             grid-row: 3/4;
         }
 
-        .proj3{
+        .proj5{
             grid-row: 4/5;
         }
 

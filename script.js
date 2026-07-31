@@ -1,7 +1,6 @@
 const modal = document.getElementById("modal")
 const showModal = document.getElementById("show-modal")
 const closeModal = document.getElementById("close-modal")
-
 const profileContainer = document.getElementById("profile-container")
 const projectsContainer = document.getElementById("projects-container")
 const profileContent = document.getElementById("profile-content-parent")
@@ -15,13 +14,11 @@ const topNav = document.getElementById("top-nav")
 showModal.addEventListener("click", () => {
     modal.classList.add("show-modal")
     modal.classList.remove("hidden")
-    console.log("open modal")
 })
 
 closeModal.addEventListener("click", () => {
     modal.classList.add("hidden")
     modal.classList.remove("show-modal")
-    console.log("exit modal")
 })
 
 
@@ -34,7 +31,6 @@ profileContainer.addEventListener("click", () => {
         profileContainer.classList.add("profile-grid")
         topNav.classList.remove("hidden")
         
-
         projectsContainer.classList.remove("projects-container-expand")
         projectsContainer.classList.add("projects-container-flex")
         projectsContent.classList.add("hidden")
