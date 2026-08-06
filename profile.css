@@ -210,10 +210,18 @@
 
 /* MEDIA QUERIES */
 /* phone 1 */
- @media(min-width: 330px){
+/* @media(max-width: 330px){
     .profile-content-parent{
         width: calc(100% - 0.6rem);
-        height: calc(87% - 5rem);
+        height: calc(100% - 0.5rem);
+    }
+} */
+
+ @media(min-width: 330px){
+    .profile-content-parent{
+        width: calc(100% - 0.2rem);
+        height: calc(100 - 0.99rem);
+        
     }
 
     .profile-content{
@@ -233,7 +241,7 @@
     /* profile content grid*/
     .intro-box p{
         grid-row: 2/4;
-        font-size: 1rem;
+        font-size: 1.11rem;
     }
 
     .img-box{
@@ -244,16 +252,12 @@
         grid-row: 4/6;
     }
 
-    .contact-btn {
-        font-size: 0.7rem;
-    }
-
     .contact{
-        font-size: 0.623rem;
+        font-size: 0.77rem;
     }
 
     .skill-item {
-        font-size: 0.66rem;
+        font-size: 0.77rem;
     }
 
     .profile-container-shrink{
@@ -274,9 +278,25 @@
 
 }
 
-@media (min-width: 650px){
+@media (min-width: 530px){
     .intro-box p{
         font-size: 1.5rem;
+    }
+
+    .skills-box {
+        font-size: 1em;
+    }
+
+    .skill-item{
+        font-size: 1em;
+    }
+
+    .contact-icon {
+        width: 25px;
+    }
+
+    .contact-btn {
+        font-size: 0.8em;
     }
 }
 
@@ -293,6 +313,7 @@
 
     .profile-content {
         padding: 1.5em;
+
     }
 
     .profile-grid{
@@ -330,11 +351,11 @@
 
     .skills-box {
         grid-row: 5/7;
-        font-size: 0.88em;
+        font-size: 1em;
     }
 
     .skill-item{
-        font-size: 0.88em;
+        font-size: 1em;
     }
 
     .contact-icon {
@@ -342,7 +363,7 @@
     }
 
     .contact-btn {
-        font-size: 0.88em;
+        font-size: 1em;
     }
 
     /* applies to BOTH profile and projects */
@@ -384,7 +405,10 @@
 
 /* desktop*/
 @media (min-width: 1024px){
-
+    .profile-content-parent{
+        width: calc(100% - 1rem);
+        height: calc(87% - 1rem);
+    }
     
     .profile-container{
         padding:2em 9em;
