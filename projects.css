@@ -45,7 +45,9 @@
 }
 
 hr {
-    color: #1E1E1E;
+    border: none;
+    height: 2px;
+    background-color: #1E1E1E;
     width: 80%;
 }
 
