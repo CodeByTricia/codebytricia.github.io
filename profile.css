@@ -209,15 +209,7 @@
 
 
 /* MEDIA QUERIES */
-/* phone 1 */
-/* @media(max-width: 330px){
-    .profile-content-parent{
-        width: calc(100% - 0.6rem);
-        height: calc(100% - 0.5rem);
-    }
-} */
-
- @media(min-width: 330px){
+@media(min-width: 330px){
     .profile-content-parent{
         width: calc(100% - 0.2rem);
         height: calc(100 - 0.99rem);
@@ -265,7 +257,6 @@
     }   
 }
 
-/* phone 2 */
 @media(min-width: 430px){
     .profile-img {
         height: 100%;

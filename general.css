@@ -38,6 +38,16 @@ main {
     cursor: pointer;
 }
 
+.profile-container-shrink:hover {
+    background-color: #62ADE3;
+    cursor: pointer;
+}
+
+.projects-container-flex:hover {
+    background-color: #62ADE3;
+    cursor: pointer;
+}
+
 .projects-container-expand{
     grid-row: 2/9 !important;
     overflow-y: auto;

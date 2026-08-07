@@ -13,6 +13,10 @@
     text-decoration: none;
 }
 
+.hide-project {
+    display: none;
+}
+
 .project-img {
     width: 100%;
     margin: 0;
@@ -104,7 +108,6 @@ hr {
             grid-template-rows: 40px repeat(3, 1fr) 40px;
             grid-template-columns: 1fr 1fr;
             gap: 1em;
-
         }
 
         .proj1, .proj2 {
